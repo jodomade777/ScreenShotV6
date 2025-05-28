@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工具下載 | Tool Download</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    h1 {
+      text-align: center;
+      color: #007BFF;
+    }
+    .download-btn, .donate-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    .download-btn {
+      background: #28a745;
+      color: white;
+    }
+    .donate-btn {
+      background: #ffc107;
+      color: black;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .lang-zh, .lang-en {
+      display: none;
+    }
+  </style>
+  <script>
+    // 自動語言切換：根據瀏覽器語言顯示中或英文
+    window.onload = () => {
+      const lang = navigator.language || navigator.userLanguage;
+      const isZh = lang.startsWith('zh');
+      document.querySelectorAll(isZh ? '.lang-zh' : '.lang-en')
+              .forEach(el => el.style.display = 'block');
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- 中文 -->
+    <div class="lang-zh">
+      <h1>我的工具下載</h1>
+      <p>這是一個免費的小工具，歡迎下載使用。如果你覺得有幫助，也可以考慮贊助支持我繼續開發！</p>
+
+      <a class="download-btn" href="https://www.dropbox.com/scl/fi/duex1bdae54ch4z9d0cp2/ScreenShot_V6_Setup.zip?rlkey=ihkldzv49htyagg5qcjx8hmk3&st=xzr9wi4e&dl=0" download>📦 下載小工具</a>
+
+      <h2>使用方式</h2>
+      <p>
+        
+        ⌨️ 按下 Print Screen 並拖曳選取範圍<br>
+        ⌘ Ctrl + V 可直接貼上使用<br>
+        ✏️ 編輯後 Ctrl + C 複製使用
+      </p>
+
+      <h2>贊助開發</h2>
+      <a class="donate-btn" href="https://www.paypal.me/jodomadehelloworld/USD1" target="_blank">☕ 贊助我1杯咖啡</a>
+      <a class="donate-btn" href="https://www.paypal.me/jodomadehelloworld/USD10" target="_blank">☕ 贊助我10杯咖啡</a>
+      <a class="donate-btn" href="https://www.paypal.me/jodomadehelloworld" target="_blank">☕ 自訂金額贊助我</a>
+    </div>
+
+    <!-- English -->
+    <div class="lang-en">
+      <h1>Download My Tool</h1>
+      <p>This is a free lightweight tool. Feel free to download and use it. If you find it helpful, consider supporting my development!</p>
+
+      <a class="download-btn" href="your_tool.exe" download>📦 Download Tool</a>
+
+      <h2>How to use:</h2>
+      <p>
+        ⌨️ Press Print Screen and drag to select area<br>
+        ⌘ Ctrl + V to paste into other apps<br>
+        ✏️ After editing, press Ctrl + C to copy the result
+      </p>
+
+      <h2>Support Development</h2>
+      <a class="donate-btn" href="https://www.paypal.me/jodomadehelloworld/USD1" target="_blank">☕ Buy me 1 coffee</a>
+      <a class="donate-btn" href="https://www.paypal.me/jodomadehelloworld/USD10" target="_blank">☕ Buy me 10 coffees</a>
+      <a class="donate-btn" href="https://www.paypal.me/jodomadehelloworld" target="_blank">☕ Donate custom amount</a>
+    </div>
+  </div>
+</body>
+</html>
